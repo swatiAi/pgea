@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/fonts/AvenirLTProLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/fonts/AvenirLTProRoman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/fonts/AvenirLTProMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/fonts/AvenirLTProHeavy.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/fonts/AvenirLTProBlack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-avenir: "Avenir Next LT Pro", "Avenir Next", Arial, sans-serif;
+
+  --color-brand-lime: #c8eb00;
+  --color-brand-purple: #4a1bc4;
+  --color-site-dark: #000000;
+  --color-site-light: #ffffff;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-avenir);
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-white text-black antialiased transition-colors duration-200 dark:bg-black dark:text-white;
+  }
+}
+
+@layer components {
+  .btn-base {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-transparent font-medium leading-none transition duration-200 disabled:pointer-events-none disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-[#C8EB00] text-black hover:opacity-90;
+  }
+
+  .btn-hero {
+    @apply bg-[#C8EB00] text-black hover:opacity-90 dark:bg-[#4A1BC4] dark:text-white;
+  }
+
+  .btn-icon {
+    @apply inline-flex size-10 items-center justify-center rounded-full bg-[#C8EB00] text-black transition duration-200 hover:opacity-90;
+  }
+
+  .btn-sm {
+    @apply min-h-8 px-5 text-[11px];
+  }
+
+  .btn-md {
+    @apply min-h-10 px-7 text-xs;
+  }
+
+  .btn-lg {
+    @apply min-h-12 px-9 text-sm;
+  }
+
+  .btn-loader {
+    @apply size-4 animate-spin rounded-full border-2 border-current border-t-transparent;
+  }
+}
