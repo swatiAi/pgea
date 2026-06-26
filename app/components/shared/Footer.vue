@@ -88,25 +88,6 @@ const socialIcons = [
                         </span>
                     </NuxtLink>
 
-                    <form class="mt-8 flex max-w-[560px] gap-3 max-sm:flex-col">
-                        <label for="footer-email" class="sr-only">
-                            Email address
-                        </label>
-
-                        <div class="relative flex-1">
-                            <img src="/icons/mail.svg" alt=""
-                                class="pointer-events-none absolute left-5 top-1/2 size-4 -translate-y-1/2" />
-
-                            <input id="footer-email" type="email" placeholder="Email Here"
-                                class="h-14 w-full rounded-[4px] bg-[#EDEDED] px-12 text-sm text-black outline-none placeholder:text-black/35 dark:bg-white" />
-                        </div>
-
-                        <button type="submit"
-                            class="h-14 rounded-[4px] bg-[#C8EB00] px-8 text-[18px] font-[400] tracking-[-0.04em] text-black transition hover:opacity-90">
-                            Subscribe
-                        </button>
-                    </form>
-
                     <div class="mt-8 flex items-center gap-4">
                         <a v-for="item in socialIcons" :key="item.label" :href="item.href" target="_blank"
                             rel="noopener noreferrer" :aria-label="item.label"

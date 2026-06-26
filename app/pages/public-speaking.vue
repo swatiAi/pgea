@@ -20,7 +20,7 @@ const introParagraphs = [
 
 const speakingEvents = [
     {
-        title: "Gam Changers Switzerland 2026",
+        title: "Game Changers Switzerland 2026",
         location: "Zurich, Switzerland",
         image: "/images/public-speaking/game-changers-switzerland-2026.webp",
     },
